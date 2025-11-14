@@ -7,8 +7,7 @@ import { useMemo, useState } from "react";
 
 export default function NewsletterPage() {
   const items = getAllNewslettersSorted();
-  const { isLoading } = useSubscription();
-  const isPaidUser = true
+  const { isPaidUser, isLoading } = useSubscription();
   const [query, setQuery] = useState("");
 
   const filtered = useMemo(() => {
